@@ -1,0 +1,86 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.wrap{
+    width: 800px;
+    margin: 0 auto;
+    padding: 40px 500px;
+}
+.checkbox{
+    width: 50px;
+    height: 20px;
+    background-color: rgb(194, 188, 188);
+    display: inline-block;
+    border-radius: 100px;
+    margin-right: 10px;
+    margin-bottom: 30px; /*分開上下距離*/
+    box-shadow: 0px 2px 3px gray inset;
+    vertical-align: middle; /*開關語文字垂直置中*/
+    position: relative;/*開關語文字垂直置中*/
+    top: 13px;/*開關語文字垂直置中*/
+}
+.checkbox-btn{
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding-top: 1px;
+    margin-left: 0;/*動畫效果*/
+    transition: 0.5s;/*動畫效果*/
+    box-shadow: 1px 0px 3px gray inset;
+}
+/*當input-checkbox被選取後+號後面指定一位進行動作*/
+input[type='checkbox']:checked + .checkbox .checkbox-btn{
+    margin-left: 30px;
+}
+/*當input-checkbox被選取後+號後面指定一位進行動作*/
+input[type='checkbox']:checked + .checkbox{
+    background-color: rgb(84, 219, 84);
+}
+/*定位並且透明度為0，會跟著input移動*/
+.check{
+    position: absolute;
+    opacity: 0;
+}
